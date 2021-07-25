@@ -3,6 +3,10 @@
     src: url(../font/PublicSans-VariableFont_wght.ttf);
 }
 
+*{
+    margin: 0;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -22,6 +26,7 @@ header{
 }
 
 header nav ul{
+    padding: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -49,33 +54,36 @@ header nav ul li a:hover{
 
 /******************* Inicio section home *******************/
 section#home{
+    margin: 0;
     background-image: url(../img/david-schultz-SrewPUfo2c0-unsplash.jpg);
     background-repeat: no-repeat;
-    background-size: 100vw;
-    background-attachment: fixed;
-    background-position: initial;
+    background-size: cover;
+    background-attachment: local;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 4rem 0;
+    padding: 4rem;
+    height: 28rem;
 }
 
 section#home h1{
-    margin: 10vw 0 10vw 0;
+    text-transform: uppercase;
+    padding: 4rem;
     letter-spacing: 12px;
     font-weight: 900;
 }
 
 section#home h2{
-    margin: 0;
     letter-spacing: 6px;
+    padding: 2rem;
 }
 
 section#home h3{
-    margin-bottom: 4vw;
+    padding: 2rem 0 2rem 0;
     font-weight: 600;
+    letter-spacing: .2rem;
 }
 
 section#home a button{
@@ -96,52 +104,65 @@ section#home a button:hover{
 
 /***************** Inicio section about *****************/
 section#about{
-    padding: 4rem 0;
+    padding: 4rem;
     display: flex;
+    background-image: url("../img/pngwing.com.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    background-position: center;
+    background-blend-mode: color-dodge;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     align-content: center;
     background-color: #f2f2f2;
     color: #000;
-    height: 40vw;
+}
+
+section#about h2{
+    letter-spacing: .5rem;
+    text-transform: uppercase;
 }
 
 section#about div.resumo{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
     align-items: center;
-    margin: 0 10rem;
-    
+    flex-flow: row wrap;
+    padding: 2rem;
 }
 
 section#about div.resumo img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 12em;
 }
 
 section#about div.resumo p{
-    width: 40rem;
-    margin-left: 4rem;
+    width: 65%;
     text-align: justify;
+    font-size: 1.3rem;
 }
 
 section#about div.more{
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-content: space-around;
     align-items: center;
     justify-content: center;
-    width: 70vw;
+}
+
+section#about div.more a{
+    padding: 2rem;
 }
 
 section#about div.more a button{
     width: 12rem;
     height: 3rem;
-    margin: 0 4rem;
     background-color: #6320ee;
     color: #f8f0fb;
     border: none;
@@ -157,16 +178,371 @@ section#about div.more a button:hover{
 
 /***************** Inicio Section skills *****************/
 section#skills{
-    padding: 4rem 0;
+    padding: 4rem;
     background-color: #252422;
-    color: #fffcf2;
+    color: #f8f0fb;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 section#skills h2{
-    margin: 0;
+    align-self: center;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
 }
 
+section#skills div.skill{
+    padding: 2rem
+}
+
+section#skills div.skill p{
+    padding: 1rem 0 0 0;
+}
+
+section#skills div.skill div{
+    margin: 2px 0 1rem 0;
+    display: flex;
+    height: 1.3rem;
+    background-color: #ccc5b9;
+    border-radius: 8px;
+}
+
+section#skills div.skill div span{
+    text-align: end;
+    background-color: #eb5e28;
+    border-radius: 8px;
+    height: 100%;
+}
+
+section#skills div.tools{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+section#skills div.tools div svg{
+    height: 4rem;
+    margin: 2rem;
+    transition: .3s ease;
+}
+
+.html{
+    width: 87%;
+}
+
+.css{
+    width: 85%;
+}
+
+.js{
+    width: 92%;
+}
+
+.py{
+    width: 73%;
+}
+
+.node{
+    width: 80%;
+}
+
+.ts{
+    width: 80%;
+}
+
+.bs{
+    width: 54%;
+}
+
+.orm{
+    width: 78%;
+}
+
+.mongo{
+    width: 43%;
+}
+
+.postgre{
+    width: 48%;
+}
+
+.sqlite{
+    width: 49%;
+}
+
+.msql{
+    width: 40%;
+}
+
+.docker{
+    width: 78%;
+}
+
+.git{
+    width: 70%;
+}
+
+.react{
+    width: 45%;
+}
+
+.vscode svg:hover{
+    fill: #007ACC;
+}
+
+.insomnia svg:hover{
+    fill: #5849BE;
+}
+
+.github svg:hover{
+    fill: #181717;
+}
+
+.aws svg:hover{
+    fill: #232F3E;
+}
+
+.heroku svg:hover{
+    fill: #430098;
+}
+
+.debian svg:hover{
+    fill: #A81D33;
+}
 /******************* Fim section skills *******************/
+
+/***************** Inicio section projects *****************/
+section#projects{
+    padding: 4rem;
+    background-color: #f2f2f2;
+    color: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+}
+
+section#projects h2{
+    text-align: center;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}
+
+section#projects div.projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 2rem;
+}
+
+section#projects div.projects div{
+    width: 18rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 1rem;
+    border: .1rem solid black;
+    border-radius: 8px;
+}
+
+section#projects div.projects div img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 8px;
+    align-self: center;
+}
+
+section#projects div.projects div h3{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+section#projects div.projects div p{
+    text-align: justify;
+}
+
+section#projects div.projects div a{
+    align-self: center;
+    padding: 1rem 0 0 0;
+}
+
+section#projects div.projects div a button{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #eb5e28;
+    color: #fffcf2;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+section#projects div.projects div a button:hover{
+    background-color: #6320ee;
+    box-shadow: 0 0 1rem #403d39;
+}
+/********************* Fim section projects *********************/
+
+/*************** Inicio section Contacts ***************/
+section#contacts{
+    background-color: #f2f2f2;
+    color: #0d0d0d;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#contacts h2{
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}
+
+section#contacts p{
+    padding: 4rem;
+    font-size: 1.5rem;
+}
+
+section#contacts ul{
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+}
+
+section#contacts ul li a svg{
+    width: 4rem;
+    margin: 2rem;
+    transition: .3s ease;
+}
+
+section#contacts ul li a svg.linkedin:hover{
+    fill: #0A66C2;
+    transform: scale(1.5)
+}
+
+section#contacts ul li a svg.github:hover{
+    fill: #181717;
+    transform: scale(1.5)
+}
+
+section#contacts ul li a svg.facebook:hover{
+    fill: #1877F2;
+    transform: scale(1.5)
+}
+
+section#contacts ul li a svg.twitter:hover{
+    fill: #1DA1F2;
+    transform: scale(1.5)
+}
+
+section#contacts ul li a svg.steam:hover{
+    fill: #000000;
+    transform: scale(1.5)
+}
+
+section#contacts form{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d0d0d90;
+    color: #fff;
+    border-radius: 8px;
+    width: 24rem;
+}
+
+section#contacts form div{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+
+section#contacts form div label{
+    padding: 1rem 0;
+}
+
+section#contacts form div input{
+    width: 20rem;
+    background: none;
+    border: none;
+    border-bottom: .1rem solid #ccc5b9;
+    color: #fffcf2;
+    transition: .3s ease;
+}
+
+section#contacts form div input:hover{
+    border-bottom: .1rem solid #eb5e28;
+}
+
+section#contacts form div input:focus{
+    border-bottom: .1rem solid #eb5e28;
+    transform: scale(1.1);
+}
+
+section#contacts form div textarea{
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    padding: 1em;
+    background: #f2f2f2;
+    color: #000;
+    resize: unset;
+    transition: .3s ease;
+}
+
+section#contacts form div textarea:hover{
+    border: 1px solid #eb5e28;
+}
+
+section#contacts form div textarea:focus{
+    border: 1px solid #eb5e28;
+    transform: scale(1.1);
+}
+
+section#contacts form button{
+    margin: 1rem;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 8px;
+    border: none;
+    transition: .3s ease;
+}
+
+.btn-disable{
+    background-color: #252422;
+    color: #FFF;
+}
+
+.btn-enable{
+    background-color: #eb5e28;
+    color: #fffcf2;
+    cursor: pointer;
+}
+
+.btn-enable:hover{
+    background-color: #6320ee;
+    box-shadow: 0 0 1rem #403d39;
+}
+/************ Fim section contacts ************/
+
+footer{
+    text-align: center;
+    padding: 4rem;
+    background-color: #252422;
+    color: #fffcf2;
+}
+
+footer img{
+    width: 12rem;
+}
+
+footer p{
+    letter-spacing: .2rem;
+}
+/************** Fim Footer **************/
