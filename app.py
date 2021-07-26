@@ -6,6 +6,7 @@ from src.contato import Contato
 app = Flask(__name__)
 app.config.update(config)
 mail = Mail(app)
+lista = list()
 
 @app.route('/')
 def index():
@@ -37,6 +38,17 @@ def humor():
 @app.route('/linktree')
 def linktree():
     return render_template('linktree.html')
+
+@app.route('/todo')
+def todo():
+    return render_template('todo.html', lista = lista)
+
+@app.route('/add', methods=['GET', 'POST'])
+def add():
+    if request.method == 'POST':
+        item = request.form['item']
+        lista.append(item)
+        return redirect('/todo')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=3000)
