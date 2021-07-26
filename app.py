@@ -24,8 +24,8 @@ def send():
         msg = Message(
             subject='Contato do portifólio',
             sender=app.config.get('MAIL_USERNAME'),
-            recipients=[app.config.get('MAIL_USERNAME')],
-            body=f'''De {contato.name}!\n{contato.message}'''
+            recipients=[app.config.get('MAIL_USERNAME'), 'josep.macedo@outlook.com'],
+            body=f'''Mensagem de: \n{contato.name}\n{contato.email}\n{contato.phone}\n\n\n{contato.message}'''
         )
 
         mail.send(msg)
