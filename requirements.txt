@@ -3,7 +3,6 @@ astroid==2.6.2
 blinker==1.4
 certifi==2018.8.24
 chardet==3.0.4
-chrome-gnome-shell==0.0.0
 click==8.0.1
 colorama==0.4.4
 commonmark==0.9.1
