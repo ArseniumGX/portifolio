@@ -64,8 +64,9 @@ section#home{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
     padding: 4rem;
-    height: 28rem;
+    height: 75vh;
 }
 
 section#home h1{
@@ -78,6 +79,7 @@ section#home h1{
 section#home h2{
     letter-spacing: 6px;
     padding: 2rem;
+    text-align: center;
 }
 
 section#home h3{
@@ -131,13 +133,13 @@ section#about div.resumo{
     align-content: center;
     align-items: center;
     flex-flow: row wrap;
-    padding: 2rem;
 }
 
 section#about div.resumo img{
     width: 15rem;
     height: 15rem;
     border-radius: 12em;
+    margin: 4rem 0;
 }
 
 section#about div.resumo p{
@@ -325,6 +327,7 @@ section#projects{
     align-content: space-around;
 }
 
+
 section#projects h2{
     text-align: center;
     letter-spacing: .5rem;
@@ -349,7 +352,13 @@ section#projects div.projects div{
     margin: 1rem;
     border: .1rem solid black;
     border-radius: 8px;
+    transition: .3s ease;
 }
+
+section#projects div.projects div:hover{
+    box-shadow: 0 0 .2rem #252422;
+}
+
 
 section#projects div.projects div img{
     height: 10rem;
@@ -365,6 +374,7 @@ section#projects div.projects div h3{
 
 section#projects div.projects div p{
     text-align: justify;
+    font-size: 1.1rem;
 }
 
 section#projects div.projects div a{
@@ -414,6 +424,8 @@ section#contacts ul{
     display: flex;
     flex-flow: row wrap;
     list-style: none;
+    align-items: center;
+    justify-content: center;
 }
 
 section#contacts ul li a svg{
