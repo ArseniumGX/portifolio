@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Font;
+    src: url("../font/PublicSans-VariableFont_wght.ttf");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #252422;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    font-family: Font;
+}
+
+main#sender{
+    width: 30rem;
+    background-color: #ccc5b9;
+    color: #211a1d;
+    border-radius: 8px;
+    padding: 4rem;
+}
+
+main#sender h1{
+    text-align: center;
+    letter-spacing: .2rem;
+    padding-bottom: 2rem;
+}
+
+main#sender p{
+    text-align: justify;
+    letter-spacing: .1rem;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+main#sender p span{
+    font-weight: 800;
+}
+
+main#sender p:nth-of-type(2){
+    text-align: right;
+}
