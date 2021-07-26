@@ -77,3 +77,5 @@ areaMessage.addEventListener('keyup', () => {
         btn.classList.add('btn-disable')
     }
 })
+
+element('footer p span.year').innerHTML = new Date().getFullYear()
