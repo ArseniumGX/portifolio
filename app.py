@@ -34,5 +34,9 @@ def send():
 def humor():
     return render_template('jogo-humor.html')
 
+@app.route('/linktree')
+def linktree():
+    return render_template('linktree.html')
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=3000)
